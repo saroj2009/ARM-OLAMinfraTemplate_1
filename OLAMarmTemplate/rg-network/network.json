@@ -24,7 +24,9 @@
     "olamvn01Subnet2Prefix": "172.16.1.0/24",
     "vnet_inner_nsgTemplateFolder": "nestedtemplates",
     "vnet_inner_nsgTemplateFileName": "vnet_inner_nsg.json",
-    "vnet_inner_nsgTemplateParametersFileName": "vnet_inner_nsg.parameters.json"
+    "vnet_inner_nsgTemplateParametersFileName": "vnet_inner_nsg.parameters.json",
+    "templatelink": "https://github.com/saroj2009/ARM-OLAMinfraTemplate_1/blob/master/OLAMarmTemplate/rg-network/nsg.json",
+    "templateparamlink": "https://github.com/saroj2009/ARM-OLAMinfraTemplate_1/blob/master/OLAMarmTemplate/rg-network/nsg.parameters.json"
   },
   "resources": [
     {
@@ -32,7 +34,7 @@
       "type": "Microsoft.Network/virtualNetworks",
       "location": "[resourceGroup().location]",
       "apiVersion": "2016-03-30",
-      "dependsOn": [ ],
+      "dependsOn": [],
       "tags": {
         "displayName": "olamvn01"
       },
@@ -62,15 +64,15 @@
       "name": "vnet_inner_nsg",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2016-09-01",
-      "dependsOn": [ ],
+      "dependsOn": [],
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "[concat(parameters('_artifactsLocation'), '/', variables('vnet_inner_nsgTemplateFolder'), '/', variables('vnet_inner_nsgTemplateFileName'), parameters('_artifactsLocationSasToken'))]",
+          "uri": "[variables('templatelink')]",
           "contentVersion": "1.0.0.0"
         },
         "parametersLink": {
-          "uri": "[concat(parameters('_artifactsLocation'), '/', variables('vnet_inner_nsgTemplateFolder'), '/', variables('vnet_inner_nsgTemplateParametersFileName'), parameters('_artifactsLocationSasToken'))]",
+          "uri": "[variables('templateparamlink')]",
           "contentVersion": "1.0.0.0"
         }
       }
