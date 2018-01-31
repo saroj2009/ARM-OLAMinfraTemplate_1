@@ -1,0 +1,30 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vnetName": {
+      "value": "olamvn01"
+    },
+    "vnetPrefix": {
+      "value": "172.16.0.0/16"
+    },
+    "Subnet1Name": {
+      "value": "stagingsubnet"
+    },
+    "Subnet1Prefix": {
+      "value": "172.16.0.0/24"
+    },
+    "Subnet2Name": {
+      "value": "uatsubnet"
+    },
+    "Subnet2Prefix": {
+      "value": "172.16.1.0/24"
+    },
+    "Subnet1NSGName": {
+      "value": "NSGSubnet1"
+    },
+    "Subnet2NSGName": {
+      "value": "NSGSubnet2"
+    }
+  }
+}

@@ -43,6 +43,8 @@
     <Content Include="rg-production\olamuataut01.parameters.json" />
     <Content Include="rg-production\olamuatdis01.parameters.json" />
     <Content Include="rg-production\olamuatpub01.parameters.json" />
+    <None Include="rg-network\nsg.json" />
+    <None Include="rg-network\nsg.parameters.json" />
   </ItemGroup>
   <Target Name="GetReferenceAssemblyPaths" />
 </Project>
