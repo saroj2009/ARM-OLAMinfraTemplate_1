@@ -43,8 +43,12 @@
     <Content Include="rg-production\olamuataut01.parameters.json" />
     <Content Include="rg-production\olamuatdis01.parameters.json" />
     <Content Include="rg-production\olamuatpub01.parameters.json" />
-    <None Include="rg-network\nsg.json" />
-    <None Include="rg-network\nsg.parameters.json" />
+    <Content Include="rg-network\nsg.json" />
+    <Content Include="rg-network\nsg.parameters.json" />
+    <Content Include="nestedtemplates\inner-Vent.json" />
+    <Content Include="nestedtemplates\inner-Vent.parameters.json" />
+    <Content Include="nestedtemplates\inner_subnet.json" />
+    <Content Include="nestedtemplates\inner_subnet.parameters.json" />
   </ItemGroup>
   <Target Name="GetReferenceAssemblyPaths" />
 </Project>
