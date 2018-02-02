@@ -50,5 +50,8 @@
     <Content Include="nestedtemplates\inner_subnet.json" />
     <Content Include="nestedtemplates\inner_subnet.parameters.json" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="rg-datadisk\" />
+  </ItemGroup>
   <Target Name="GetReferenceAssemblyPaths" />
 </Project>

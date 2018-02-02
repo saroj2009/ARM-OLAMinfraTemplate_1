@@ -8,13 +8,17 @@
     "_artifactsLocationSasToken": {
       "type": "securestring"
     }
+   
 
   },
   "variables": {
     "stagingNSGName": "stagingNSG",
     "inner_subnetTemplateFolder": "nestedtemplates",
     "inner_subnetTemplateFileName": "inner_subnet.json",
-    "inner_subnetTemplateParametersFileName": "inner_subnet.parameters.json"
+    "inner_subnetTemplateParametersFileName": "inner_subnet.parameters.json",
+    "testTemplateFolder": "nestedtemplates",
+    "testTemplateFileName": "test.json",
+    "testTemplateParametersFileName": "test.parameters.json"
 
   },
   "resources": [
@@ -67,13 +71,12 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri": "https://github.com/saroj2009/ARM-OLAMinfraTemplate_1/blob/master/OLAMarmTemplate/rg-network/network.json",
+          "uri": "https://sarojwebappstorage.blob.core.windows.net/sarojcontainer/network.json",
           "contentVersion": "1.0.0.0"
         },
-        "parameters": {
-          "nsgName": {
-            "value": "[variables('stagingNSGName')]"
-          }
+        "parametersLink": {
+          "uri": "https://sarojwebappstorage.blob.core.windows.net/sarojcontainer/network.parameters.json",
+          "contentVersion": "1.0.0.0"
         }
       }
     }

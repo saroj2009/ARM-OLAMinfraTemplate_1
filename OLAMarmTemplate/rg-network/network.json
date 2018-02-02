@@ -15,13 +15,8 @@
       "metadata": {
         "description": "Name for the new NSG."
       }
-    },
-    "_artifactsLocation": {
-      "type": "string"
-    },
-    "_artifactsLocationSasToken": {
-      "type": "securestring"
     }
+   
   },
   "variables": {
     "olamvn01Prefix": "172.16.0.0/16",
