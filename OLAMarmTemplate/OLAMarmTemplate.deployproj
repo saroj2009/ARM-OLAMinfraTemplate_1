@@ -31,6 +31,19 @@
     <Content Include="Deploy-AzureResourceGroup.ps1" />
     <Content Include="rg-network\network.json" />
     <Content Include="rg-network\network.parameters.json" />
+    <Content Include="rg-olaminfra\network.json" />
+    <Content Include="rg-olaminfra\network.parameters.json" />
+    <Content Include="rg-olaminfra\nsg.json" />
+    <Content Include="rg-olaminfra\nsg.parameters.json" />
+    <Content Include="rg-olaminfra\prod_olamuataut01.parameters.json" />
+    <Content Include="rg-olaminfra\prod_olamuatdis01.parameters.json" />
+    <Content Include="rg-olaminfra\prod_olamuatpub01.parameters.json" />
+    <Content Include="rg-olaminfra\preprod_olamstgaut01.parameters.json" />
+    <Content Include="rg-olaminfra\preprod_olamstgdis01.parameters.json" />
+    <Content Include="rg-olaminfra\preprod_olamstgpub01.parameters.json" />
+    <Content Include="rg-olaminfra\server.json" />
+    <Content Include="rg-olaminfra\storage.json" />
+    <Content Include="rg-olaminfra\storage.parameters.json" />
     <Content Include="rg-preproduction\olamstgdis01.parameters.json" />
     <Content Include="rg-preproduction\olamstgaut01.parameters.json" />
     <Content Include="PreProductionTemplate\server.json" />
@@ -49,9 +62,16 @@
     <Content Include="nestedtemplates\inner-Vent.parameters.json" />
     <Content Include="nestedtemplates\inner_subnet.json" />
     <Content Include="nestedtemplates\inner_subnet.parameters.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="rg-datadisk\" />
+    <Content Include="nestedtemplates\nsg.json" />
+    <Content Include="nestedtemplates\nsg.parameters.json" />
+    <Content Include="nestedtemplates\network.json" />
+    <Content Include="nestedtemplates\network.parameters.json" />
+    <Content Include="nestedtemplates\storage.json" />
+    <Content Include="nestedtemplates\storage.parameters.json" />
+    <Content Include="nestedtemplates\preprod_olamstgaut01.json" />
+    <Content Include="nestedtemplates\preprod_olamstgaut01.parameters.json" />
+    <None Include="rg-olaminfra\mastertemplate.json" />
+    <None Include="rg-olaminfra\mastertemplate.parameters.json" />
   </ItemGroup>
   <Target Name="GetReferenceAssemblyPaths" />
 </Project>

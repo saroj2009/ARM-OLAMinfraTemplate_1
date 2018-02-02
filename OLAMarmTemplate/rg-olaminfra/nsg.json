@@ -2,23 +2,10 @@
   "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "_artifactsLocation": {
-      "type": "string"
-    },
-    "_artifactsLocationSasToken": {
-      "type": "securestring"
-    }
    
   },
   "variables": {
-    "stagingNSGName": "stagingNSG",
-    "inner_subnetTemplateFolder": "nestedtemplates",
-    "inner_subnetTemplateFileName": "inner_subnet.json",
-    "inner_subnetTemplateParametersFileName": "inner_subnet.parameters.json",
-    "testTemplateFolder": "nestedtemplates",
-    "testTemplateFileName": "test.json",
-    "testTemplateParametersFileName": "test.parameters.json"
-
+    "stagingNSGName": "stagingNSG"
   },
   "resources": [
     {
@@ -60,23 +47,6 @@
             }
           }
         ]
-      }
-    },
-    {
-      "name": "inner_subnet",
-      "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2016-09-01",
-      "dependsOn": [],
-      "properties": {
-        "mode": "Incremental",
-        "templateLink": {
-          "uri": "https://sarojwebappstorage.blob.core.windows.net/sarojcontainer/network.json",
-          "contentVersion": "1.0.0.0"
-        },
-        "parametersLink": {
-          "uri": "https://sarojwebappstorage.blob.core.windows.net/sarojcontainer/network.parameters.json",
-          "contentVersion": "1.0.0.0"
-        }
       }
     }
   ]

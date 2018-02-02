@@ -1,0 +1,94 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+
+
+  },
+  "variables": {
+    "nsgTemplateFolder": "nestedtemplates",
+    "nsgTemplateFileName": "nsg.json",
+    "nsgTemplateParametersFileName": "nsg.parameters.json"//,
+    //"networkTemplateFolder": "nestedtemplates",
+    //"networkTemplateFileName": "network.json",
+    //"networkTemplateParametersFileName": "network.parameters.json",
+    //"storageTemplateFolder": "nestedtemplates",
+    //"storageTemplateFileName": "storage.json",
+    //"storageTemplateParametersFileName": "storage.parameters.json",
+    //"preprod_olamstgaut01TemplateFolder": "nestedtemplates",
+    //"preprod_olamstgaut01TemplateFileName": "preprod_olamstgaut01.json",
+    //"preprod_olamstgaut01TemplateParametersFileName": "preprod_olamstgaut01.parameters.json"
+  },
+  "resources": [
+    {
+      "name": "nsg",
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2016-09-01",
+      "dependsOn": [],
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "https://sarojwebappstorage.blob.core.windows.net/sarojcontainer/nsg.json",
+          "contentVersion": "1.0.0.0"
+        },
+        "parametersLink": {
+          "uri": "https://sarojwebappstorage.blob.core.windows.net/sarojcontainer/nsg.parameters.json",
+          "contentVersion": "1.0.0.0"
+        }
+      }
+    }//,
+    //{
+    //  "name": "network",
+    //  "type": "Microsoft.Resources/deployments",
+    //  "apiVersion": "2016-09-01",
+    //  "dependsOn": [],
+    //  "properties": {
+    //    "mode": "Incremental",
+    //    "templateLink": {
+    //      "uri": "https://sarojwebappstorage.blob.core.windows.net/sarojcontainer/network.json",
+    //      "contentVersion": "1.0.0.0"
+    //    },
+    //    "parametersLink": {
+    //      "uri": "https://sarojwebappstorage.blob.core.windows.net/sarojcontainer/network.parameters.json",
+    //      "contentVersion": "1.0.0.0"
+    //    }
+    //  }
+    //},
+    //{
+    //  "name": "storage",
+    //  "type": "Microsoft.Resources/deployments",
+    //  "apiVersion": "2016-09-01",
+    //  "dependsOn": [],
+    //  "properties": {
+    //    "mode": "Incremental",
+    //    "templateLink": {
+    //      "uri": "https://sarojwebappstorage.blob.core.windows.net/sarojcontainer/storage.json",
+    //      "contentVersion": "1.0.0.0"
+    //    },
+    //    "parametersLink": {
+    //      "uri": "https://sarojwebappstorage.blob.core.windows.net/sarojcontainer/storage.parameters.json",
+    //      "contentVersion": "1.0.0.0"
+    //    }
+    //  }
+    //},
+    //{
+    //  "name": "preprod_olamstgaut01",
+    //  "type": "Microsoft.Resources/deployments",
+    //  "apiVersion": "2016-09-01",
+    //  "dependsOn": [],
+    //  "properties": {
+    //    "mode": "Incremental",
+    //    "templateLink": {
+    //      "uri": "https://sarojwebappstorage.blob.core.windows.net/sarojcontainer/preprod_olamstgaut01.json",
+    //      "contentVersion": "1.0.0.0"
+    //    },
+    //    "parametersLink": {
+    //      "uri": "https://sarojwebappstorage.blob.core.windows.net/sarojcontainer/preprod_olamstgaut01.parameters.json",
+    //      "contentVersion": "1.0.0.0"
+    //    }
+    //  }
+    //}
+  ],
+  "outputs": {
+  }
+}
