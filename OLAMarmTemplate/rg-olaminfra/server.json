@@ -23,11 +23,11 @@
     },
     "storageAccountName": {
       "type": "string",
-      "defaultValue": "storage7hiavz3bspbow"
+      "defaultValue": "storage77eja6kmahu7q"
     },
     "storageAccountResourceGroup": {
       "type": "string",
-      "defaultValue": "rg-preproduction"
+      "defaultValue": "rg-olaminfra"
     },
     "virtualNetworkName": {
       "type": "string",
@@ -35,7 +35,7 @@
     },
     "virtualNetworkResourceGroup": {
       "type": "string",
-      "defaultValue": "rg-network"
+      "defaultValue": "rg-olaminfra"
     },
     "pipDnsName": {
       "type": "string",
