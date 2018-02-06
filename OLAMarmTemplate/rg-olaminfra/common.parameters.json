@@ -1,0 +1,18 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "linuxvm1Name": {
+      "value": "olamstgpub01"
+    },
+    "linuxvm1AdminUserName": {
+      "value": "olamstgpub01"
+    },
+    "linuxvm1AdminPassword": {
+      "value": "Saroj@12345678"
+    },
+    "pip003DnsName": {
+      "value": "pipdns0004"
+    }
+  }
+}

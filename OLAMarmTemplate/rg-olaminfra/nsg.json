@@ -45,6 +45,20 @@
               "priority": 101,
               "direction": "Inbound"
             }
+          },
+          {
+            "name": "putty-rule",
+            "properties": {
+              "description": "Allow WEB",
+              "protocol": "Tcp",
+              "sourcePortRange": "*",
+              "destinationPortRange": "22",
+              "sourceAddressPrefix": "Internet",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 102,
+              "direction": "Inbound"
+            }
           }
         ]
       }

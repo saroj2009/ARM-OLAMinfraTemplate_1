@@ -72,6 +72,8 @@
     <Content Include="nestedtemplates\preprod_olamstgaut01.parameters.json" />
     <Content Include="rg-olaminfra\mastertemplate.json" />
     <Content Include="rg-olaminfra\mastertemplate.parameters.json" />
+    <Content Include="rg-olaminfra\common.parameters.json" />
+    <Content Include="rg-olaminfra\no.parameters.json" />
   </ItemGroup>
   <Target Name="GetReferenceAssemblyPaths" />
 </Project>

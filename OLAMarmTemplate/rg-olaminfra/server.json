@@ -23,7 +23,7 @@
     },
     "storageAccountName": {
       "type": "string",
-      "defaultValue": "storage77eja6kmahu7q"
+      "defaultValue": "storagevm77eja6kmahu7q"
     },
     "storageAccountResourceGroup": {
       "type": "string",
@@ -45,13 +45,14 @@
   "variables": {
     "serverImagePublisher": "Canonical",
     "serverImageOffer": "UbuntuServer",
-    "serverOSDiskName": "[concat(parameters('serverName'), '-osDisk')]",
+    "serverOSDiskName": "[concat(parameters('serverName'), '-osDisk11')]",
+    "serverDataDiskName": "[concat(parameters('serverName'), '-DataDisk11')]",
     "serverVmSize": "Standard_D2_v2",
     "serverVnetID": "[resourceId(parameters('virtualNetworkResourceGroup'), 'Microsoft.Network/virtualNetworks', parameters('virtualNetworkName'))]",
     "serverSubnetRef": "[concat(variables('serverVnetID'), '/subnets/', 'stagingsubnet')]",
     "serverStorageAccountContainerName": "vhds",
-    "serverNicName": "[concat(parameters('serverName'), '-nic0')]",
-    "pipName": "[concat(parameters('serverName'), '-pip')]"
+    "serverNicName": "[concat(parameters('serverName'), '-nic11')]",
+    "pipName": "[concat(parameters('serverName'), '-pip11')]"
   },
   "resources": [
     {
@@ -115,7 +116,18 @@
             },
             "caching": "ReadWrite",
             "createOption": "FromImage"
-          }
+          },
+          "dataDisks": [
+            {
+              "name": "datadisk1",
+              "diskSizeGB": 1023,
+              "lun": 0,
+              "vhd": {
+                "uri": "[concat(reference(resourceId(parameters('storageAccountResourceGroup'), 'Microsoft.Storage/storageAccounts', parameters('storageAccountName')), '2016-01-01').primaryEndpoints.blob, variables('serverStorageAccountContainerName'), '/', variables('serverDataDiskName'), '.vhd')]"
+              },
+              "createOption": "Empty"
+            }
+          ]
         },
         "networkProfile": {
           "networkInterfaces": [
