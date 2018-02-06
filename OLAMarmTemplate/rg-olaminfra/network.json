@@ -11,7 +11,7 @@
     },
     "nsgName": {
       "type": "string",
-      "defaultValue": "stagingNSG1",
+      "defaultValue": "stagingNSG",
       "metadata": {
         "description": "Name for the new NSG."
       }
