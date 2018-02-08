@@ -1,0 +1,67 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    
+   
+  },
+  "variables": {
+    
+    
+  },
+  "resources": [
+    {
+      "name": "storage",
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2016-09-01",
+      "dependsOn": [ ],
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "https://sarojwebappstorage.blob.core.windows.net/olamuat/createstorage.json",
+          "contentVersion": "1.0.0.0"
+        },
+        "parametersLink": {
+          "uri": "https://sarojwebappstorage.blob.core.windows.net/olamuat/createstorage.parameters.json",
+          "contentVersion": "1.0.0.0"
+        }
+      }
+    },
+    {
+      "name": "network",
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2016-09-01",
+      "dependsOn": [ ],
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "https://sarojwebappstorage.blob.core.windows.net/olamuat/createnetwork.json",
+          "contentVersion": "1.0.0.0"
+        },
+        "parametersLink": {
+          "uri": "https://sarojwebappstorage.blob.core.windows.net/olamuat/createnetwork.parameters.json",
+          "contentVersion": "1.0.0.0"
+        }
+      }
+    },
+    {
+      "name": "vm",
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2016-09-01",
+      "dependsOn": [ ],
+      "properties": {
+        "mode": "Incremental",
+        "templateLink": {
+          "uri": "https://sarojwebappstorage.blob.core.windows.net/olamuat/createvm.json",
+          "contentVersion": "1.0.0.0"
+        },
+        "parametersLink": {
+          "uri": "https://sarojwebappstorage.blob.core.windows.net/olamuat/createvm.parameters.json",
+          "contentVersion": "1.0.0.0"
+        }
+      }
+    }
+  ],
+  "outputs": {
+  }
+}

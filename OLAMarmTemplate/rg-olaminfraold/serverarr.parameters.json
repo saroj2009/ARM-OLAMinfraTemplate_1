@@ -1,0 +1,61 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "virtualNetworkName": {
+      "value": "olamvn01"
+    },
+    "adminPassword": {
+     "value": "Saroj@12345678"
+    },
+   
+    "ASConfig": {
+      "value": [
+        {
+          "availabilitySetName": "olaminfraAS",
+          "UDomainCount": 5,
+          "FDomainCount": 2,
+          "isManaged": false
+        }
+      ]
+        
+    },
+    "VMsConfig": {
+      "value": [
+        {
+          "virtualMachineName": "olamVM1",
+          "virtualMachineSize": "Standard_D2_v2",
+          "storageAccountName": "storagevm77eja6kmahu7q",
+          //"diagnosticsStorageAccountName": "benteststorageDiag245",
+          "subnetName": "pubsubnet",
+          "privateIPAddressType": "Dynamic",
+          //"privateIpAddress": "10.100.0.40",
+          "publicIPAddressType": "Dynamic",
+          "dnsNameForPublicIP": "olamstgpub01pip01",
+          "OSPublisher": "Canonical",
+          "OSOffer": "UbuntuServer",
+          "OSSKU": "14.04.2-LTS",
+          "isPublic": 1,
+          "availabilitySetName": "olaminfraAS"
+        },
+        {
+          "virtualMachineName": "olamVM2",
+          "virtualMachineSize": "Standard_D2_v2",
+          "storageAccountName": "storagevm77eja6kmahu7q",
+          //"diagnosticsStorageAccountName": "benteststorageDiag245",
+          "subnetName": "pubsubnet",
+          "privateIPAddressType": "Dynamic",
+          //"privateIpAddress": "10.100.0.41",
+          "publicIPAddressType": "Dynamic",
+          "dnsNameForPublicIP": "olamstgpub01pip02",
+          "OSPublisher": "Canonical",
+          "OSOffer": "UbuntuServer",
+          "OSSKU": "14.04.2-LTS",
+          "isPublic": 1,
+          "availabilitySetName": "olaminfraAS"
+        }
+      ]
+    }
+  }
+
+}

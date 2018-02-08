@@ -1,0 +1,18 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vnetName": {
+      "value": "olamvn02"
+    },
+    "addressPrefix": {
+      "value": "10.100.0.0/24"
+    },
+    "subnetNames": {
+      "value": [ "UATSubnet01", "UATSubnet02" ]
+    },
+    "subnetAddressPrefixes": {
+      "value": [ "10.100.0.0/28", "10.100.0.16/28" ]
+    }
+  }
+}

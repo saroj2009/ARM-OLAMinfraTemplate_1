@@ -1,0 +1,48 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "virtualMachineName": {
+      "value": "prodauth01"
+    },
+    "virtualMachineSize": {
+      "value": "Standard_D2_v2"
+    },
+    "storageAccountName": {
+      "value": "olamprodstorage245"
+    },
+    "virtualNetworkName": {
+      "value": "olamvn01"
+    },
+    "adminPassword": {
+      "value": "Saroj@12345678"
+    },
+    //"diagnosticsStorageAccountName": {
+    //  "value": "benteststorageDiag245"
+    //},
+    "subnetName": {
+      "value": "ProdSubnet01"
+    },
+    "privateIpAddress": {
+      "value": "172.16.0.4"
+    },
+    //"dnsNameForPublicIP": {
+    //  "value": "prodauthdns01"
+    //},
+    //"publicIPAddressType": {
+    //  "value": "Dynamic"
+    //},
+    "privateIPAddressType": {
+      "value": "Static"
+    },
+    "OSPublisher": {
+      "value": "Canonical"
+    },
+    "OSOffer": {
+      "value": "UbuntuServer"
+    },
+    "OSSKU": {
+      "value": "14.04.2-LTS"
+    }
+  }
+}

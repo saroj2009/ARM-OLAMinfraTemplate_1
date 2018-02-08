@@ -11,7 +11,7 @@
     },
     "nsgName": {
       "type": "string",
-      "defaultValue": "stagingNSG",
+      "defaultValue": "authNSG",
       "metadata": {
         "description": "Name for the new NSG."
       }
@@ -20,11 +20,11 @@
   },
   "variables": {
     "olamvn01Prefix": "172.16.0.0/16",
-    "olamvn01Subnet1Name": "stagingsubnet",
+    "olamvn01Subnet1Name": "authsubnet",
     "olamvn01Subnet1Prefix": "172.16.0.0/24",
-    "olamvn01Subnet2Name": "uatsubnet",
+    "olamvn01Subnet2Name": "pububnet",
     "olamvn01Subnet2Prefix": "172.16.1.0/24",
-    "stagingNSGName": "stagingNSG"
+    "stagingNSGName": "authNSG"
   },
   "resources": [
     {

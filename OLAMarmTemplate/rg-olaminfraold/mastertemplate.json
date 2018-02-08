@@ -6,18 +6,7 @@
 
   },
   "variables": {
-    //"nsgTemplateFolder": "nestedtemplates",
-    //"nsgTemplateFileName": "nsg.json",
-    //"nsgTemplateParametersFileName": "nsg.parameters.json",
-    //"networkTemplateFolder": "nestedtemplates",
-    //"networkTemplateFileName": "network.json",
-    //"networkTemplateParametersFileName": "network.parameters.json",
-    //"storageTemplateFolder": "nestedtemplates",
-    //"storageTemplateFileName": "storage.json",
-    //"storageTemplateParametersFileName": "storage.parameters.json",
-    //"preprod_olamstgaut01TemplateFolder": "nestedtemplates",
-    //"preprod_olamstgaut01TemplateFileName": "preprod_olamstgaut01.json",
-    //"preprod_olamstgaut01TemplateParametersFileName": "preprod_olamstgaut01.parameters.json"
+   
   },
   "resources": [
     {
@@ -70,24 +59,24 @@
           "contentVersion": "1.0.0.0"
         }
       }
-    },
-    {
-      "name": "preprod_olamstgaut01",
-      "type": "Microsoft.Resources/deployments",
-      "apiVersion": "2016-09-01",
-      "dependsOn": [],
-      "properties": {
-        "mode": "Incremental",
-        "templateLink": {
-          "uri": "https://sarojwebappstorage.blob.core.windows.net/sarojcontainer/server.json",
-          "contentVersion": "1.0.0.0"
-        },
-        "parametersLink": {
-          "uri": "https://sarojwebappstorage.blob.core.windows.net/sarojcontainer/preprod_olamstgaut01.parameters.json",
-          "contentVersion": "1.0.0.0"
-        }
-      }
-    }
+    }//,
+    //{
+    //  "name": "preprod_olamstgaut01",
+    //  "type": "Microsoft.Resources/deployments",
+    //  "apiVersion": "2016-09-01",
+    //  "dependsOn": [],
+    //  "properties": {
+    //    "mode": "Incremental",
+    //    "templateLink": {
+    //      "uri": "https://sarojwebappstorage.blob.core.windows.net/sarojcontainer/server.json",
+    //      "contentVersion": "1.0.0.0"
+    //    },
+    //    "parametersLink": {
+    //      "uri": "https://sarojwebappstorage.blob.core.windows.net/sarojcontainer/preprod_olamstgaut01.parameters.json",
+    //      "contentVersion": "1.0.0.0"
+    //    }
+    //  }
+    //}
   ],
   "outputs": {
   }
