@@ -50,7 +50,8 @@
     "nicSuffix": "-nic",
     "vhdStorageContainerName": "vhds",
     "networkInterfaceName": "[concat(parameters('virtualMachineName'), variables('nicSuffix'))]",
-    "adminUsername": "ctsadmin"
+    "adminUsername": "ctsadmin",
+    "authvm01nsg": "authvm01nsg"
   },
   "resources": [
     {
@@ -65,7 +66,7 @@
         "osProfile": {
           "computerName": "[parameters('virtualMachineName')]",
           "adminUsername": "[variables('adminUsername')]",
-          "adminPassword": "[parameters('adminPassword')]"//,
+          "adminPassword": "[parameters('adminPassword')]" //,
           //"windowsConfiguration": {
           //  "provisionVmAgent": "true"
           //}
@@ -105,7 +106,7 @@
               "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('networkInterfaceName'))]"
             }
           ]
-        }//,
+        } //,
         //"diagnosticsProfile": {
         //  "bootDiagnostics": {
         //    "enabled": true,
@@ -126,11 +127,15 @@
           {
             "name": "ipconfig1",
             "properties": {
+
+              //"networkSecurityGroup": {
+              //  "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('authvm01nsg'))]"
+              //},
+              "privateIPAllocationMethod": "[parameters('privateIPAddressType')]",
+              "privateIPAddress": "[parameters('privateIpAddress')]",
               "subnet": {
                 "id": "[variables('subnetRef')]"
-              },
-              "privateIPAllocationMethod": "[parameters('privateIPAddressType')]",
-              "privateIPAddress": "[parameters('privateIpAddress')]"
+              }
             }
           }
         ]

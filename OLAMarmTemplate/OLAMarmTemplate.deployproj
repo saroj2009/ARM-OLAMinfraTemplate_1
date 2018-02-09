@@ -77,6 +77,10 @@
     <Content Include="rg-olaminfra\createvmswithha.json" />
     <Content Include="rg-olaminfra\createvmwithpip.json" />
     <Content Include="rg-olaminfra\PROD\createdisvm.parameters.json" />
+    <Content Include="rg-olaminfra\PROD\createauthvmnsginbound.json" />
+    <None Include="rg-olaminfra\creatensginboundoutbound.json" />
+    <None Include="rg-olaminfra\creatensgoutbound.json" />
+    <Content Include="rg-olaminfra\PROD\createauthvmnsginbound.parameters.json" />
     <None Include="rg-olaminfra\PROD\createstorage.parameters.json" />
     <Content Include="rg-olaminfra\PROD\createauthvm.parameters.json" />
     <Content Include="rg-olaminfra\PROD\createpubvmswithha.parameters.json" />
