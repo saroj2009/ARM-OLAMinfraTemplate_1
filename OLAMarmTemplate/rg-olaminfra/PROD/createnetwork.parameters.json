@@ -13,6 +13,9 @@
     },
     "subnetAddressPrefixes": {
       "value": [ "172.16.0.0/24", "172.16.1.0/24" ]
+    },
+    "nsgNames": {
+      "value": [ "nsgprodsubnet01", "nsgprodsubnet02" ]
     }
   }
 }
